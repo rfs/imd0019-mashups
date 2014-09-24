@@ -1,0 +1,32 @@
+// Place all the styles related to the Panel controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar {
+  margin: 15px;
+  .fb_iframe_widget {
+    padding-top: 14px;
+  }
+}
+.tab-content {
+  border: 1px solid #ddd;
+  border-top: none;
+  div#last {
+    ul {
+      padding: 5px;
+      list-style-type: none;
+      li {
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      li:hover {
+        border: 1px solid #e7e7e7;
+        background-color: #f8f8f8;
+      }
+    }
+  }
+}
+.footer {
+  padding: 15px;
+}

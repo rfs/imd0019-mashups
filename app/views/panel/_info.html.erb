@@ -1,0 +1,19 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#last" role="tab" data-toggle="tab">Últimos problemas</a></li>
+  <li><a href="#problem" role="tab" data-toggle="tab">Problema</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="last">
+    <ul>
+      <% @problems.take(7).each do |problem| %>
+        <%= render "problems/problem_line", problem: problem %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="tab-pane" id="problem">
+    <div class="fb-comments" data-href="http://localhost:3000/" data-numposts="5" data-colorscheme="light"></div>
+  </div>
+</div>

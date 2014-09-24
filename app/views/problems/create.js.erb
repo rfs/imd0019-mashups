@@ -1,0 +1,13 @@
+$('#newProblemModal').modal('hide');
+$('#newProblemModal').on('hidden.bs.modal', function(event) {
+  $('#newProblemModal #problem_type_id').val('');
+  $('#newProblemModal #problem_date').val('');
+  $('#newProblemModal #info').val('');
+  $('#newProblemModal #video_url').val('');
+  $('#newProblemModal #latitude').val('');
+  $('#newProblemModal #longitude').val('');
+
+  $.displayOnMap({coords: {latitude: <%= @problem.latitude %>, longitude: <%= @problem.longitude %>}});
+
+  $('div#last > ul').prepend('<%= escape_javascript(render "problems/problem_line", problem: @problem) %>');
+});
